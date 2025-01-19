@@ -13,7 +13,7 @@ public class Main {
 
         System.out.println("№3");
         int number = 10500;
-        int result = ((number/ 10)/10);
+        double result = (((double)number/ 10)/10);
         System.out.println(result);
 
         System.out.println("№4");
@@ -33,7 +33,7 @@ public class Main {
         Sycle();
     }
     public static void Task() {
-        int S = (46 + 10) * (10 / 3);
+        double S = (46 + 10) * ((double)10 / 3);
         double F =  (29) * (4) * (-15);
 
         System.out.println(S);
