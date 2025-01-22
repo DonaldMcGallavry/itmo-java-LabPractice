@@ -11,11 +11,11 @@ public class Calculator {
         return a + b;
     }
 
-    public int Div(int a, int b) {
+    public double Div(int a, int b) {
     if (b == 0) {
         System.out.println("Деление на ноль");
     }
-        return a/b;
+        return (double)a/b;
     }
     public double Div(double a, double b) {
         if (b == 0) {
@@ -23,11 +23,11 @@ public class Calculator {
         }
         return a/b;
     }
-    public long Div(long a, long b) {
+    public double Div(long a, long b) {
         if (b == 0) {
             System.out.println("Деление на ноль");
         }
-        return a/b;
+        return (double)a/b;
     }
 
     public int Multi (int a, int b){
