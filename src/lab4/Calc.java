@@ -38,50 +38,41 @@ public class Calc {
         }
         System.out.println();
     }
-    public void thirdTask(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите первое число: ");
-        int num1 = scan.nextInt();
-        System.out.println("Введите второе число: ");
-        int num2 = scan.nextInt();
-        System.out.println("Введите третье число: ");
-        int num3 = scan.nextInt();
+    public boolean thirdTask(int num1, int num2, int num3){
+
         int sum = num1 + num2;
+        boolean trueSum = false;
 
         if (num1 + num2 == num3){
-            System.out.println("Результат: true");
+            return trueSum = true;
         } else {
-            System.out.println("Результат: false");
+            return trueSum;
         }
     }
-    public void fourthTask(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите первое число: ");
-        int num1 = scan.nextInt();
-        System.out.println("Введите второе число: ");
-        int num2 = scan.nextInt();
-        System.out.println("Введите третье число: ");
-        int num3 = scan.nextInt();
-        if (num2 > num1 && num3 > num2){
-            System.out.println("Результат: true");
+    public boolean fourthTask(int numb1, int numb2, int numb3){
+
+        boolean sorted = false;
+        if (numb2 > numb1 && numb3 > numb2){
+            return sorted = true;
         } else {
-            System.out.println("Результат: false");
+            return sorted;
         }
     }
-    public void fifthTask(){
-        int[] array = {3,-3,5,4,7,3};
+    public boolean fifthTask(int[] array){
+
         System.out.println(Arrays.toString(array));
+        boolean trueElem = false;
         if (array.length < 2){
             System.out.println("Размер массива должен быть больше или равен 2");
         }
         if(array[0] == 3 && array[array.length - 1] == 3){
-            System.out.println("true");
+            return trueElem = true;
         } else {
-            System.out.println("false");
+            return trueElem;
         }
     }
-    public void sixthTask() {
-        int[] arr = {54, 264, 1234, 0, 548789, -8, 1};
+    public boolean sixthTask(int[] arr) {
+
         System.out.println(Arrays.toString(arr));
         boolean contain1_3 = false;
 
@@ -90,15 +81,13 @@ public class Calc {
                 contain1_3 = true;
             }
         }
-        if  (contain1_3 == true){
-            System.out.println("массив содержит число 1 или 3");
-        } else {
-            System.out.println("Массив не содержит число 1 или 3");
-        }
+        return contain1_3;
     }
-    public void p2FirstTask(){
-        int[] array6 = {1,1,1,1,3,3};
+    public String p2FirstTask(int[] array6){
+
         boolean sorted = true;
+        String truth = "Ok";
+        String notTruth = "Please, try again";
         for (int i = 0;i < array6.length - 1;i++){
             if (array6[i] > array6[i+1]){
                 sorted = false;
@@ -106,9 +95,9 @@ public class Calc {
             }
         }
         if (!sorted){
-            System.out.println("Please, try again");
+            return notTruth;
         } else {
-            System.out.println("Ok");
+            return truth;
         }
     }
     public void p2SecondTask(){
@@ -122,18 +111,18 @@ public class Calc {
         }
         System.out.println(Arrays.toString(arrray7));
     }
-    public void p2ThirdTask(){
-        int [] ar7 = {5,6,7,2};
+    public int [] p2ThirdTask(int [] ar7){
+
         System.out.println("Array 1: " + Arrays.toString(ar7));
 
         int temp = ar7[0];
         ar7[0] = ar7[ar7.length - 1];
         ar7[ar7.length - 1]= temp;
 
-        System.out.println("Array 2: " + Arrays.toString(ar7));
+        return ar7;
     }
-    public void p2FourthTask() {
-        int [] array8 = {1,2,3,4,3,2,1};
+    public void p2FourthTask(int [] array8) {
+
         int uniqueNumber = findUnique(array8);
 
         if (uniqueNumber != -1){
@@ -162,12 +151,13 @@ public class Calc {
         return -1;
     }
 
-    public void p2FifthTask(){
-        int [] arrayFin = {5,88,-1,546,12,45,2,87546};
+    public void p2FifthTask(int [] arrayFin){
+
         System.out.println(Arrays.toString(arrayFin));
         int [] result = mergeSort(arrayFin);
 
         System.out.println(Arrays.toString(result));
+
     }
 
     public int [] mergeSort(int [] arrayFin){
